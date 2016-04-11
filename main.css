@@ -1,15 +1,21 @@
-html,
-body {
-    height: 100%;
+/* height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("http://www.chicagosouthseo.com/wp-content/uploads/2011/09/cityscape-background-1920x1080.jpg") no-repeat;
+    background-size: cover;*/
 }
 
+/*#overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(120,70,38,0.6);
+    z-index: 999;
+}*/
 body {
     padding: 0;
     margin: 0;
     color: #333;
     font-family: 'Open Sans', sans-serif;
 }
-
 h1 {
     font-size: 36px;
     font-family: 'Nixie One', serif;
@@ -18,7 +24,6 @@ h1 {
     margin: 0;
     line-height: 1;
 }
-
 h2 {
     font-size: 18px;
     font-family: 'Nixie One', serif;
@@ -27,105 +32,91 @@ h2 {
     margin: 0;
     line-height: 1;
 }
-
 a {
     color: #B597B8;
     text-decoration: none;
-    transition: all 0.5s ease;
 }
-
 header,
 section {
     padding: 20px;
 }
-
 section {
     padding-top: 125px;
 }
-
 .highlight {
     color: #B597B8;
 }
-
 .lowlight {
     font-family: 'Shadows Into Light';
 }
 
-
 /* HEADER*/
-
 header {
-    position: fixed;
-    top: 0;
-    background: white;
-    border-bottom: 1px solid #eee;
-    width: 100%;
-}
-
-header {
-    position: static;
+    position: relative;
     background: transparent;
     border-bottom: none;
     text-align: center;
     padding-top: 100px;
+    /* top: -300px;*/
+    
+    animation: mymove 2s linear;
 }
-
+@keyframes mymove {
+    0% {
+        top: -300px;
+    }
+    
+    100% {
+        top: 0px;
+    }
+}
 header h1 {
     font-size: 120px;
 }
-
 header h2 {
     font-size: 40px;
 }
-
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-
 /*ABOUT*/
-
-  @keyframes spinner {
+@keyframes spinner {
     from {
-     transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
+    
     to {
-      transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
     }
-  }
-  
-   #profile {
+}
+#profile {
     margin: 1em auto;
     -webkit-perspective: 1200px;
     -moz-perspective: 1200px;
     -ms-perspective: 1200px;
     perspective: 1200px;
-  }
-  
-  #spinner {
+}
+#spinner {
     -webkit-animation-name: spinner;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 6s;
-
     animation-name: spinner;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-duration: 6s;
-
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  }
-
-  #spinner:hover {
+}
+#spinner:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
-  }
-
+}
 .profile-img {
     width: 18%;
     border-radius: 50%;
@@ -133,50 +124,94 @@ footer {
     float: left;
     margin-right: 20px;
 }
-
 blockquote {
     clear: both;
     text-align: center;
     padding-top: 20px;
 }
-
 blockquote p {
     font-family: 'Shadows Into Light', sans-serif;
     font-size: 25px;
 }
-
 cite p {
     font-family: 'Open Sans', sans-serif;
 }
 
+/*IMAGES*/
+#images {
+    text-align: center;
+}
+.fav-img {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    float: left;
+}
+.grayScale figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.grayScale figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+.flashy figure:hover img {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+.opacity figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.opacity figure:hover img {
+    opacity: .5;
+}
 
 /*CONTACT*/
-
 .contact-form {
+    clear: both;
     width: 600px;
     margin: 0 auto;
     background: white;
     padding: 18px;
     border-radius: 4px;
 }
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     border: 1px solid #ccc;
     padding: 5px;
 }
-
 .contact-form textarea {
     height: 100px;
 }
-
 .contact form input:focus,
 .contact form textarea:focus {
     outline: none;
     border: 1px solid #B597B8;
 }
-
 .contact form input[type="submit"] {
     width: auto;
     padding: 10px 20px;
@@ -186,24 +221,19 @@ cite p {
     border-radius: 5px;
 }
 
-
 /*FOOTER*/
-
 .page-wrap {
     min-height: 100%;
     margin-bottom: -35px;
 }
-
 .page-wrap:after {
     content: "";
     display: block;
 }
-
 footer,
 .page-wrap:after {
     height: 35px;
 }
-
 footer {
     position: fixed;
     bottom: 0;
@@ -213,9 +243,8 @@ footer {
     line-height: 35px;
     width: 100%;
 }
-
 footer p {
     margin: 0;
     float: left;
 }
-
+   
