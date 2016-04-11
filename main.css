@@ -139,11 +139,12 @@ cite p {
 
 /*IMAGES*/
 #images {
-    text-align: center;
+    display:flex;
 }
 .fav-img {
     display: inline-block;
     width: 300px;
+    height: 175px;
     margin: 20px;
     float: left;
 }
