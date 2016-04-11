@@ -1,0 +1,276 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: "Nixie One", serif;
+}
+
+h1, h2 {
+    font-family: 'Nixie One', serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+    /* removes default space */
+    line-height: 1;
+    /* tightens up the space between the headings */
+}
+
+a {
+    color: #B597B8;
+    text-decoration: none;
+    /* removes default underline */
+    transition: all 0.5s ease;
+}
+
+header,
+section {
+    padding: 20px, 30px;
+}
+
+section {
+    padding-top: 125px;
+}
+
+.highlight {
+    color: #B597B8;
+}
+
+.lowlight {
+    font-family: 'Shadows Into Light';
+}
+
+
+/* HEADER
+-----------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header h2 {
+    font-size: 18px;
+}
+
+
+/*NAVIGATION */
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+
+nav .current {
+    color: black;
+}
+
+
+/* HOME PAGE
+-----------------------------------------*/
+
+.home {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url('http://feelgrafix.com/data_images/out/4/769269-cityscape-wallpaper.jpg') no-repeat;
+    background-size: cover;
+}
+
+.home header {
+    position: static;
+    background: transparent;
+    border-bottom: none;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.home header h1 {
+    font-size: 120px;
+}
+
+.home header h2 {
+    font-size: 40px;
+}
+
+.home footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.home nav {
+    text-align: right;
+    font-size: 25px;
+}
+
+.home nav ul {
+    display: none;
+}
+
+.home nav:hover ul {
+    display: block;
+}
+
+.home li {
+    display: block;
+}
+
+.home nav a {
+    display: inline-block;
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+.home nav a:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+
+.fa-bars {
+    padding: 0 15px 15px 15px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #B597B8;
+}
+
+
+/* ABOUT PAGE
+-----------------------------------------*/
+
+.profile-img {
+    width: 18%;
+    border-radius: 50%;
+    box-shadow: 2px 5px 10px black;
+    float: left;
+    margin-right: 20px;
+}
+
+blockquote {
+    clear: both;
+text-align: center;
+padding-top: 20px;
+}
+
+blockquote p {
+    font-family: 'Shadows Into Light', sans-serif;
+    font-size: 25px;
+}
+
+cite p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* CONTACT PAGE*/
+
+.contact-form {
+    width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border: 1px solid #B597B8;
+}
+
+.contact form input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background: #B597B8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* FOOTER*/
+
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -35px;
+    /* must be the same height as footer */
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+footer,
+.page-wrap:after {
+    height: 35px;
+}
+
+footer {
+    bottom: 0;
+    background-color: #E8E8E8;
+    clear: both;
+    padding: 5px;
+    line-height: 35px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .copyright {
+    margin: 0;
+    float: left;
+}
